@@ -1,0 +1,9 @@
+# Configuration for evaluating the Spirals dataset
+dataset: "/home/shared_ws6/data/feature_matching/spirals/unreal"
+scene: "all"
+output: "output/2025_FeatureMatching/eval_spirals/results.json"
+device: "cuda"
+estimator: "opencv"
+ransac_th: 1.0
+matchers: ["LightGlue", "SuperGlue"]
+rerun: true

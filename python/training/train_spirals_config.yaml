@@ -1,0 +1,12 @@
+# Train LightGlue on Spirals Dataset
+data_dir: "/home/shared_ws6/data/feature_matching/spirals"
+experiment: "lightglue_spirals"
+no_timestamp: false
+batch_size: 8
+epochs: 50
+lr: 0.0001
+num_workers: 8
+resize: 1024
+max_keypoints: 2048
+tensorboard: true
+tensorboard_port: 6006

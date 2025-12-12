@@ -1,0 +1,7 @@
+class: UnrealDataset
+basedir: /home/shared_ws6/data/feature_matching/spirals/unreal
+agent: rover_0
+cameras: [front_left]
+measurements: [front_left]
+euroc_format: False
+data_types: [rgb, depth]

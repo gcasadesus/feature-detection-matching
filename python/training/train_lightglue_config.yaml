@@ -1,0 +1,24 @@
+# Train LightGlue on Unreal Dataset Configuration
+# Command line arguments override these values
+
+# Dataset configuration
+data_dir: null  # Required: Directory with exported dataset (from export_unreal_for_training.py)
+
+# Experiment configuration
+experiment: null  # Required: Experiment name (will have timestamp appended automatically)
+no_timestamp: false  # Don't append timestamp to experiment name
+load_experiment: null  # Load pretrained model from experiment (e.g., 'sp+lg_homography')
+
+# Training hyperparameters
+batch_size: 16  # Batch size
+epochs: 10  # Number of epochs
+lr: 1e-4  # Learning rate
+num_workers: 8  # Number of data loading workers
+
+# Model configuration
+resize: 1024  # Image resize size
+max_keypoints: 2048  # Max keypoints
+
+# TensorBoard
+tensorboard: true  # Start TensorBoard automatically pointing to the experiment directory
+tensorboard_port: 6006  # Port for TensorBoard

@@ -1,0 +1,7 @@
+class: UnrealDataset
+basedir: /home/shared_ws6/data/unreal_engine/local_traverse_fov90/short_base
+agent: rover_0
+cameras: [front_left]
+measurements: [front_left]
+euroc_format: True
+data_types: [rgb, depth]

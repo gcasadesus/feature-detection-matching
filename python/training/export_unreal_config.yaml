@@ -1,0 +1,30 @@
+# Export Unreal Dataset Configuration
+# Command line arguments override these values
+
+# Dataset configuration
+config: null  # Required: Path to dataset config file
+output: null  # Required: Output directory
+basedir: null  # Optional: Override dataset basedir from config
+agent: null  # Optional: Override agent name from config
+
+# Pair generation
+step: 1  # Step between consecutive frames (used if use_overlapping_pairs=false and max_sep=null)
+max_pairs: null  # Maximum number of pairs to export
+cameras: ["front_left"]  # Cameras to export
+
+# Overlapping pairs options
+use_overlapping_pairs: false  # Use overlapping pairs instead of step-based pairs
+extractor_config: null  # Path to extractor config JSON (required if use_overlapping_pairs=true)
+camera: "front"  # Camera name for overlap detection
+max_depth: 100  # Maximum depth for features
+thresh_dist: 0.025  # Distance threshold for covisibility (meters)
+min_covisible: 200  # Minimum number of covisible features
+max_frames: null  # Maximum number of frames to process
+n_jobs: 1  # Number of parallel jobs for overlap detection (-1 for all cores)
+
+# Alternative pair generation
+max_sep: null  # Maximum separation for consecutive pairs (overrides step if set)
+
+# Rerun visualization
+rerun: true  # Enable rerun logging for visualization
+rerun_save: null  # Path to save rerun recording (e.g., 'recording.rrd'). If null, spawns viewer.

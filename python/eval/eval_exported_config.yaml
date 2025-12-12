@@ -1,0 +1,23 @@
+# Evaluate Exported Dataset Configuration
+# Command line arguments override these values
+
+# Dataset configuration
+dataset: null  # Required: Path to exported dataset directory
+scene: "unreal"  # Scene name in dataset
+output: null  # Optional: Output JSON file for results (if null, auto-generated)
+
+# Evaluation settings
+max_pairs: null  # Maximum number of pairs to evaluate
+device: "cuda"  # Device to use: "cuda" or "cpu"
+estimator: "opencv"  # Robust estimator: "opencv" or "poselib"
+ransac_th: 1.0  # RANSAC threshold (pixels)
+
+# Matchers to evaluate
+matchers: ["LightGlue", "SuperGlue"]  # List of matchers to evaluate
+
+# Rerun visualization
+rerun: true  # Enable rerun logging for visualization
+rerun_save: null  # Path to save rerun recording (e.g., 'recording.rrd'). If null, spawns viewer.
+
+# Checkpoint loading
+checkpoint: null  # Path to trained checkpoint (.tar file) or experiment directory for LightGlue
